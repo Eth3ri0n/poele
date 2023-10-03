@@ -6,6 +6,10 @@
   --font-color: #08090a;
   --croissant-One: 'Croissant One', cursive;
   --mooli: 'Mooli', sans-serif;
+  --Teach-Lead: #23ce6b;
+  --Product-Owner: #f24236;
+  --Scrum-Master: #f5bb00;
+  --Dev: #59d2fe;
 }
 
 /* Reset */
@@ -78,30 +82,184 @@ a:hover::before {
 }
 
 /* About */
+main {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
 h2 {
   font-size: 2.5rem;
   color: var(--secondary);
   margin: 2rem;
 }
 
+/* Members-container */
+.members-container {
+  background: #eee;
+  padding: 2rem;
+  width: 100%;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.members-container > h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 1.5rem;
+  color: var(--primary);
+}
+.members-container > ul > li {
+  font-size: 1.4rem;
+  padding: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 1.2rem;
+}
+.members-container > ul > li:nth-child(1) > span {
+  background: var(--Teach-Lead);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.members-container > ul > li:nth-child(2) > span {
+  background: var(--Scrum-Master);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.members-container > ul > li:nth-child(3) > span {
+  background: var(--Product-Owner);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.members-container > ul > li:nth-child(4) > span {
+  background: var(--Dev);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+/* Table planning */
+caption {
+  font-size: 2.5rem;
+  font-weight: 900;
+  padding: 1.2rem;
+  margin-top: 2rem;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 5.5rem;
+  font-size: 1.2rem;
+}
+thead {
+  font-size: 1.7rem;
+}
+th,
+td {
+  border: 1px solid #a0a0a0;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #f2f2f2;
+}
+td {
+  font-size: 1.5rem;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.tech_lead {
+  background: var(--Teach-Lead);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 900;
+}
+.product_owner {
+  background: var(--Product-Owner);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  font-weight: 900;
+}
+.scrum_master {
+  background: var(--Scrum-Master);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  font-weight: 900;
+}
+.dev {
+  background: var(--Dev);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  font-weight: 900;
+}
 /* Form */
 .form {
   margin: 0 auto;
+  padding: 1.2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   background-color: #fff;
-  max-width: 50vw;
+  min-width: 80vw;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
+.text__form {
+  border-right: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 80vh;
+}
+.text__form > h3 {
+  font-size: 2rem;
+}
 form {
   display: flex;
   flex-flow: column;
   justify-content: space-around;
   padding: 0 2rem 4rem;
+  min-width: 50%;
 }
 form label {
   margin: 1.5rem 0;
@@ -114,30 +272,30 @@ form label + input {
   height: 7rem;
 }
 form label + input::placeholder {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 form label + textarea::placeholder {
-    font-size: 1.8rem;
-    padding: 2rem;
+  font-size: 1.8rem;
+  padding: 2rem;
 }
 form label + *:focus {
   outline: 2px solid var(--primary);
   transition: all 0.1s ease-in;
-  -webkit-transition:;
-  -moz-transition:;
-  -ms-transition:;
-  -o-transition:;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -ms-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
 }
 form textarea {
   resize: none;
   overflow-y: auto;
 }
 form button {
-    margin: 2rem 0 0 0;
-    padding: 2rem;
-    font-size: 2rem;
-    background-color: var(--primary);
-    border: none;
-    color: #fff;
-    cursor: pointer;
+  margin: 2rem 0 0 0;
+  padding: 2rem;
+  font-size: 2rem;
+  background-color: var(--primary);
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
