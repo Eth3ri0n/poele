@@ -3,13 +3,15 @@
   --primary: #f39237;
   --secondary: #06aed5;
   --background-color: #f4f7f5;
-  --font-color: #08090a;
+  --font-color-dark: #08090a;
+  --font-color-light: #ffffff;
   --croissant-One: 'Croissant One', cursive;
   --mooli: 'Mooli', sans-serif;
   --Teach-Lead: #23ce6b;
   --Product-Owner: #f24236;
   --Scrum-Master: #f5bb00;
   --Dev: #59d2fe;
+  --box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 /* Reset */
@@ -24,7 +26,7 @@
 html,
 body {
   background-color: var(--background-color);
-  color: var(--font-color);
+  color: var(--font-color-dark);
   font-family: var(--mooli);
   font-size: 10px;
 }
@@ -61,7 +63,7 @@ a {
   position: relative;
   font-size: 1.8rem;
   font-weight: 400;
-  color: white;
+  color: var(--font-color-light);
 }
 a::before {
   content: '';
@@ -95,72 +97,150 @@ h2 {
   color: var(--secondary);
   margin: 2rem;
 }
+.presentation > h3 {
+  color: var(--primary);
+  font-size: 1.7rem;
+  font-weight: 900;
+  text-decoration: underline;
+}
+.presentation > p > .emoji {
+  font-size: 2rem;
+}
+.presentation > p {
+  font-size: 1.5rem;
+  padding: 1.2rem 0;
+}
+.objet {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.objet > h3 {
+  color: var(--primary);
+  font-size: 1.7rem;
+  font-weight: 900;
+  text-decoration: underline;
+}
+.objet > p {
+  font-size: 1.5rem;
+  padding: 1.2rem 0;
+}
+.container-languages {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.container-languages > h3 {
+  color: var(--primary);
+  font-size: 1.7rem;
+  font-weight: 900;
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+.container-languages > ul.languages {
+  display: flex;
+  align-items: center;
+}
+.container-languages > ul.languages > li {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  font-weight: 900;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  color: var(--font-color-light);
+}
+.container-languages > ul.languages > li:nth-child(1) {
+  background-color: orangered;
+}
+.container-languages > ul.languages > li:nth-child(2) {
+  background-color: lightskyblue;
+}
+.container-languages > ul.languages > li:nth-child(3) {
+  background-color: gold;
+}
 
-/* Members-container */
-.members-container {
+/* DEV Team Part */
+section {
   background: #eee;
-  padding: 2rem;
   width: 100%;
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--box-shadow);
+  /* padding: 0rem 1rem 1rem 1rem; */
+  border-radius: 0.5rem;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 0.5rem;
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
   -ms-border-radius: 0.5rem;
   -o-border-radius: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin: 2rem 0;
 }
-.members-container > h3 {
-  text-align: center;
-  font-size: 1.8rem;
-  padding: 1.5rem;
+section > h3 {
   color: var(--primary);
+  font-size: 1.8rem;
+  padding: 2rem 0;
+  text-align: center;
 }
-.members-container > ul > li {
-  font-size: 1.4rem;
-  padding: 1.5rem;
+.container-members {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  padding: 1.2rem;
+}
+
+.container-members > .member {
+  margin: 0 1.2rem;
+  border-right: 1px solid black;
+}
+.container-members > .member > h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1.2rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  -webkit-border-radius: 0.5rem 0 0 0.5rem;
+  -moz-border-radius: 0.5rem 0 0 0.5rem;
+  -ms-border-radius: 0.5rem 0 0 0.5rem;
+  -o-border-radius: 0.5rem 0 0 0.5rem;
+  color: var(--font-color-light);
+}
+.container-members > .member > h4#scrum_master {
+  background-color: var(--Scrum-Master);
+}
+.container-members > .member > h4#product_owner {
+  background-color: var(--Product-Owner);
+}
+.container-members > .member > h4#dev {
+  background-color: var(--Dev);
+}
+.container-members > .member > h4#tech_lead {
+  background-color: var(--Teach-Lead);
+}
+.container-members > .member > ul {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+.container-members > .member > ul > li {
+  font-size: 1.5rem;
   font-weight: 900;
-  margin-bottom: 1.2rem;
+  letter-spacing: 2px;
+  line-height: 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
-.members-container > ul > li:nth-child(1) > span {
-  background: var(--Teach-Lead);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
-}
-.members-container > ul > li:nth-child(2) > span {
-  background: var(--Scrum-Master);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
-}
-.members-container > ul > li:nth-child(3) > span {
-  background: var(--Product-Owner);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
-}
-.members-container > ul > li:nth-child(4) > span {
-  background: var(--Dev);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
+.container-members > .member > ul > li > i {
+  color: var(--primary);
+  margin-left: 0.5rem;
 }
 
 /* Table planning */
+section.planning {
+  width: 100%;
+}
 caption {
   font-size: 2.5rem;
   font-weight: 900;
@@ -296,6 +376,287 @@ form button {
   font-size: 2rem;
   background-color: var(--primary);
   border: none;
-  color: #fff;
+  color: var(--font-color-light);
   cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  padding: 1.5rem;
+  color: var(--font-color-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer > p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.devs {
+  background-color: #202020;
+  width: 50%;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+}
+.devs > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+.devs > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 4.5rem;
+  padding: 1rem 2rem;
+}
+.devs > ul > li > strong {
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+/* Media queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  main {
+    width: 100%;
+    padding: 1.2rem;
+  }
+  .container-members > .member > h4 {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .container-members > .member > h5 {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 1.2rem;
+  }
+  .container-members > .member > ul > li {
+    font-size: 1rem;
+  }
+
+  /* Table planning */
+  td > .tech_lead {
+    background: var(--Teach-Lead);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 900;
+    display: block;
+  }
+  td > .product_owner {
+    background: var(--Product-Owner);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    font-weight: 900;
+    display: block;
+}
+  td > .scrum_master {
+    background: var(--Scrum-Master);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    font-weight: 900;
+    display: block;
+  }
+  td > .dev {
+    background: var(--Dev);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    font-weight: 900;
+    display: block;
+  }
+
+  /* Form */
+  .form {
+    display: flex;
+    flex-flow: column;
+    min-width: 80vw;
+  }
+  .text__form {
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    border-bottom: 1px solid #000;
+    margin-bottom: 1.5rem;
+  }
+
+  form label {
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    text-align: left;
+  }
+  form label + input {
+    padding: 1rem;
+    width: 40rem;
+    height: 7rem;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) {
+  main {
+    width: 100%;
+    padding: 1.2rem;
+  }
+  .container-members > .member > h4 {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .container-members > .member > h5 {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 1.2rem;
+  }
+  .container-members > .member > ul > li {
+    font-size: 1rem;
+  }
+
+  /* Table planning */
+  td > .tech_lead {
+    background: var(--Teach-Lead);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 900;
+    display: block;
+  }
+  td > .product_owner {
+    background: var(--Product-Owner);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    font-weight: 900;
+    display: block;
+}
+  td > .scrum_master {
+    background: var(--Scrum-Master);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    font-weight: 900;
+    display: block;
+  }
+  td > .dev {
+    background: var(--Dev);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    font-weight: 900;
+    display: block;
+  }
+
+  /* Form */
+  .form {
+    display: flex;
+    flex-flow: column;
+    min-width: 80vw;
+  }
+  .text__form {
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    border-bottom: 1px solid #000;
+    margin-bottom: 1.5rem;
+  }
+
+  form label {
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    text-align: left;
+  }
+  form label + input {
+    padding: 1rem;
+    width: 50rem;
+    height: 7rem;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  main {
+    width: 100%;
+    padding: 1.2rem;
+  }
+  .container-members > .member > h4 {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .container-members > .member > h5 {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 1.2rem;
+  }
+  .container-members > .member > ul > li {
+    font-size: 1rem;
+  }
+
+  /* Table planning */
+  td > .tech_lead {
+    background: var(--Teach-Lead);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 900;
+    display: block;
+  }
+  td > .product_owner {
+    background: var(--Product-Owner);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    font-weight: 900;
+    display: block;
+}
+  td > .scrum_master {
+    background: var(--Scrum-Master);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    font-weight: 900;
+    display: block;
+  }
+  td > .dev {
+    background: var(--Dev);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    font-weight: 900;
+    display: block;
+  }
 }
