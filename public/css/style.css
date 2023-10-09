@@ -399,11 +399,11 @@ footer > p {
   width: 50%;
   margin-top: 1.5rem;
   padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
 }
 .devs > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 50%;
   margin: 0 auto;
   font-size: 1.5rem;
@@ -426,6 +426,10 @@ footer > p {
   main {
     width: 100%;
     padding: 1.2rem;
+  }
+  .container-members {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .container-members > .member > h4 {
     font-size: 1rem;
@@ -458,7 +462,7 @@ footer > p {
     -o-border-radius: 0.5rem;
     font-weight: 900;
     display: block;
-}
+  }
   td > .scrum_master {
     background: var(--Scrum-Master);
     padding: 1rem;
@@ -547,7 +551,7 @@ footer > p {
     -o-border-radius: 0.5rem;
     font-weight: 900;
     display: block;
-}
+  }
   td > .scrum_master {
     background: var(--Scrum-Master);
     padding: 1rem;
@@ -636,7 +640,7 @@ footer > p {
     -o-border-radius: 0.5rem;
     font-weight: 900;
     display: block;
-}
+  }
   td > .scrum_master {
     background: var(--Scrum-Master);
     padding: 1rem;
