@@ -541,10 +541,6 @@ footer > p {
   }
 
   /* Table planning */
-  .table {
-    width: 100%;
-    overflow-x: scroll;
-  }
   td > .tech_lead {
     background: var(--Teach-Lead);
     padding: 1rem;
