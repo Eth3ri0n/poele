@@ -247,6 +247,9 @@ caption {
   padding: 1.2rem;
   margin-top: 2rem;
 }
+.table {
+  overflow-x: scroll;
+}
 table {
   border-collapse: collapse;
   width: 100%;
@@ -269,6 +272,9 @@ th {
 }
 td {
   font-size: 1.5rem;
+}
+td > span {
+  display: block;
 }
 tr:nth-child(even) {
   background-color: #dddddd;
@@ -446,11 +452,7 @@ footer > p {
   }
 
   /* Table planning */
-  .table {
-    overflow-x: scroll;
-  }
-  thead>tr>
-  td > .tech_lead {
+  thead > tr > td > .tech_lead {
     background: var(--Teach-Lead);
     padding: 1rem;
     border-radius: 0.5rem;
@@ -539,6 +541,10 @@ footer > p {
   }
 
   /* Table planning */
+  .table {
+    width: 100%;
+    overflow-x: scroll;
+  }
   td > .tech_lead {
     background: var(--Teach-Lead);
     padding: 1rem;
