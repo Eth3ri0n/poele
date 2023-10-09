@@ -347,6 +347,7 @@ form {
   justify-content: space-around;
   padding: 0 2rem 4rem;
   min-width: 50%;
+  margin: 0 auto;
 }
 form label {
   margin: 1.5rem 0;
@@ -404,7 +405,7 @@ footer > p {
 .devs {
   background-color: #202020;
   width: 50%;
-  margin-top: 1.5rem;
+  margin: 0 auto;
   padding: 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
