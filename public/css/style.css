@@ -252,6 +252,7 @@ table {
   width: 100%;
   margin-bottom: 5.5rem;
   font-size: 1.2rem;
+  margin: 0 auto;
 }
 thead {
   font-size: 1.7rem;
@@ -445,6 +446,10 @@ footer > p {
   }
 
   /* Table planning */
+  .table {
+    overflow-x: scroll;
+  }
+  thead>tr>
   td > .tech_lead {
     background: var(--Teach-Lead);
     padding: 1rem;
