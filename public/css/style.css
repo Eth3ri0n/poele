@@ -498,7 +498,11 @@ footer > p {
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
+<<<<<<< HEAD
   }
+=======
+}
+>>>>>>> d54a685d435c5d215b8315a69571dd49dcd1a24e
   .container-text-hero > h1 {
     font-size: 5rem;
     margin: 0 auto;
