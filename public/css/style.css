@@ -154,6 +154,33 @@ section.container-hero {
   width: 50%;
   margin: 0 auto;
 }
+/* Dish part */
+.dish > img {
+  width: 100vw;
+}
+.dish-container-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+.dish-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  background-color: #ffbc42;
+}
+.dish-container > img {
+  width: 10rem;
+}
+.dish-text-container {
+  text-align: center;
+  padding: 1.2rem;
+}
+.dish-text-container > h4 {
+  color: #a0a0a0;
+}
 
 /* About */
 #about {
@@ -235,18 +262,18 @@ h2 {
 }
 
 /* DEV Team Part */
-section {
+section.team-container {
   background: #eee;
   width: 100%;
+  padding: 0rem 1rem 1rem 1rem;
   box-shadow: var(--box-shadow);
-  /* padding: 0rem 1rem 1rem 1rem; */
-  border-radius: 0.5rem;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
   -ms-border-radius: 0.5rem;
   -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
   margin: 2rem 0;
 }
 section > h3 {
